@@ -61,5 +61,20 @@ var WalkIn = [
 ];
 
 export default function TapList() {
-  
+  return (
+    <div>
+      <style jsx>{`
+        // CSS Goes Here
+      `}</style>
+      {WalkIn.map((beer, index) =>
+        <Beer name={beer.name}
+          brand={beer.brand}
+          price={beer.price}
+          ABV={beer.ABV}
+          pintsLeft={beer.pintsLeft}
+          key={index} 
+        />
+      )}
+    </div>
+  )
 }
