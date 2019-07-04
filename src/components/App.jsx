@@ -10,6 +10,15 @@ import Admin from './Admin';
 function App(){
   return (
     <div>
+      <style jsx global>{`
+      body, div#react-app-root {
+        display: contents;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      `}</style>
       <Navbar />
       <Switch>
         <Route exact path='/beer' component={Taplist} />
