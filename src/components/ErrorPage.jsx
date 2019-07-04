@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -12,6 +13,7 @@ function Page404(props) {
 }
 
 Page404.PropTypes = {
+  
   location: PropTypes.object
 };
 
