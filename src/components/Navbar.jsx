@@ -11,6 +11,7 @@ function Navbar() {
       <h3>Let beer desorb</h3>
       <Link to='/'>Taplist Home</Link>
       <Link to='/beer'>All Beers</Link>
+      <Link to='/admin'>Admin</Link>
     </div>
   );
 }
