@@ -1,7 +1,5 @@
 const webpack = require('webpack');
-const {
-  resolve
-} = require('path');
+const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -10,7 +8,7 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    resolve(__dirname, "src") + "/index.jsx"
+    resolve(__dirname, 'src') + '/index.jsx'
   ],
 
   output: {
@@ -32,32 +30,39 @@ module.exports = {
 
   module: {
     rules: [{
-        test: /\.jsx?$/,
-        enforce: "pre",
-        loader: "eslint-loader",
-        exclude: /node_modules/,
-        options: {
-          emitWarning: true,
-          configFile: "./.eslintrc.json"
-        }
-      },
-      {
-        test: /\.jsx?$/,
-        loader: "babel-loader",
-        exclude: /node_modules/,
-        options: {
-          presets: [
-            ["es2015", {
-              "modules": false
-            }],
-            "react",
-          ],
-          plugins: [
-            "react-hot-loader/babel",
-            "styled-jsx/babel"
-          ]
-        }
+      test: /\.jsx?$/,
+      enforce: 'pre',
+      loader: 'eslint-loader',
+      exclude: /node_modules/,
+      options: {
+        emitWarning: true,
+        configFile: './.eslintrc.json'
       }
+    },
+    {
+      test: /\.jsx?$/,
+      loader: 'babel-loader',
+      exclude: /node_modules/,
+      options: {
+        presets: [
+          ['es2015', {
+            'modules': false
+          }],
+          'react',
+        ],
+        plugins: [
+          'react-hot-loader/babel',
+          'styled-jsx/babel'
+        ]
+      }
+    },
+    {
+      test: /\.(png|jpe?g|gif)$/,
+      use: [{
+        loader: 'file-loader',
+        options: {},
+      }, ],
+    },
     ]
   },
   plugins: [
@@ -66,8 +71,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'template.ejs',
       appMountId: 'react-app-root',
-      title: 'React Help Queue',
-      filename: resolve(__dirname, "build", "index.html"),
+      title: 'React Tap Room',
+      filename: resolve(__dirname, 'build', 'index.html'),
     }),
   ]
 };
