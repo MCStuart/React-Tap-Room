@@ -12,7 +12,7 @@ function Navbar() {
           display: flex;
           flex-wrap: nowrap;
           font-size: 1 rem;
-          justify-content: space-between;
+
           line-height: 1.5 rem;
           white-space: nowrap;
           overflow: hidden;
@@ -25,23 +25,38 @@ function Navbar() {
           text-decoration: none;
           display: flex;
           flex-wrap: nowrap;
+          justify-content: space-between;
+        }
+
+        .navbar-text div {
+           justify-content: space-between; 
         }
 
         .title {
-          line-height: .5rem;
-          text-align: left;
+          font-size: 3 rem;
+          line-height: 40 % ;
+          letter-spacing: 0.060 rem;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        h1 {
+          margin-top: 1rem;
+          margin-bottom: 0;
+        }
+
+        h3 {
+          margin-top: 0;
+          text-align: center;
         }
 
         .links {
-          line-height: rem;
           float: right;
           text-align: center;
-          padding:
-          font-size: 4rem;
+          font-size: 2rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
-
         }
 
       `}</style>

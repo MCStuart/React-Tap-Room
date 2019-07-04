@@ -7,6 +7,7 @@ import Page404 from './ErrorPage';
 import Admin from './Admin';
 // import { BeerDetail } from './BeerDetail';
 
+
 function App(){
   return (
     <div>
