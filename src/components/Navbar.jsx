@@ -6,7 +6,6 @@ function Navbar() {
     <div>
       <style jsx>{`
         .navbar {
-          display: block;
           margin: 0;
           align-items: center;
           box-sizing: border-box;
@@ -21,13 +20,28 @@ function Navbar() {
         }
 
         .navbar-text {
+          margin-left: 1rem;  
           color: #ffffff;
           text-decoration: none;
+          display: flex;
+          flex-wrap: nowrap;
         }
 
-
         .title {
+          line-height: .5rem;
           text-align: left;
+        }
+
+        .links {
+          line-height: rem;
+          float: right;
+          text-align: center;
+          padding:
+          font-size: 4rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
         }
 
       `}</style>
