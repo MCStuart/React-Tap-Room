@@ -9,7 +9,7 @@ function Navbar() {
       `}</style>
       <h1>Tap Reactor</h1>
       <h3>Let beer desorb</h3>
-      <Link to='/'>Home</Link>
+      <Link to='/'>Taplist Home</Link>
       <Link to='/beer'>All Beers</Link>
     </div>
   );

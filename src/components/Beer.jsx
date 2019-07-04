@@ -1,24 +1,80 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Taplist from './Taplist';
 
-function Beer(props) {
-  return (
+var WalkIn = [
+  {
+    name: 'Free Range Red',
+    brand: 'Laurelwood',
+    price: '$6',
+    ABV: '6.1%',
+    pintsLeft: '124'
+  },
+  {
+    name: 'Rise Up Red',
+    brand: 'Hopworks',
+    price: '$6',
+    ABV: '6.1%',
+    pintsLeft: '124'
+  },
+  {
+    name: 'Ripstop Rye Pils',
+    brand: 'Base Camp',
+    price: '$5',
+    ABV: '5.7%',
+    pintsLeft: '124'
+  },
+  {
+    name: 'Free Range Red',
+    brand: 'Laurelwood',
+    price: '$6',
+    ABV: '6.1%',
+    pintsLeft: '124'
+  },
+  {
+    name: 'Wanderlust IPA',
+    brand: 'Breakside',
+    price: '$7',
+    ABV: '6.6%',
+    pintsLeft: '124'
+  },
+  {
+    name: 'Ginormous',
+    brand: 'Gigantic',
+    price: '$8',
+    ABV: '8.8%',
+    pintsLeft: '124'
+  },
+  {
+    name: 'C-Note',
+    brand: 'Lompoc',
+    price: '$7',
+    ABV: '6.9%',
+    pintsLeft: '124'
+  },
+  {
+    name: 'Helix',
+    brand: 'Ecliptic',
+    price: '$5',
+    ABV: '5.8%',
+    pintsLeft: '124'
+  },
+];
+
+export default function TapList() {
+  return ( 
     <div>
-      <h2>{props.name}</h2>
-      <h2>{props.brand}</h2>
-      <h2>{props.price}</h2>
-      <h2>{props.ABV}</h2>
-      <h2>{props.pintsLeft}</h2>
+      <style jsx>{`
+        // CSS Goes Here
+      `}</style> 
+      {WalkIn.map((taplist, index) =>
+        <Taplist name={taplist.name}
+          brand={taplist.brand}
+          price = {taplist.price}
+          ABV = {taplist.ABV}
+          pintsLeft = {taplist.pintsLeft}
+          key = {index} />
+      )
+      } 
     </div>
   );
 }
-
-Beer.propTypes = {
-  name: PropTypes.string.isRequired,
-  brand: PropTypes.string.isRequired,
-  price: PropTypes.string,
-  ABV: PropTypes.string.isRequired,
-  pintsLeft: PropTypes.string.isRequired
-};
-
-export default Beer;
