@@ -13,7 +13,6 @@ function Page404(props) {
 }
 
 Page404.PropTypes = {
-  
   location: PropTypes.object
 };
 
