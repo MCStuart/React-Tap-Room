@@ -5,6 +5,7 @@ import Taplist from './Taplist';
 import Navbar from './Navbar';
 import Page404 from './ErrorPage';
 import Admin from './Admin';
+import NewBeerKegForm from './NewBeerKeg';
 // import { BeerDetail } from './BeerDetail';
 
 
@@ -25,6 +26,7 @@ function App(){
         <Route exact path='/beer' component={Taplist} />
         <Route exact path='/' component={Beer} />
         <Route exact path='/admin' component={Admin} />
+        <Route exact path='/add' component={NewBeerKegForm} />
         <Route component={Page404} />
       </Switch>
     </div>

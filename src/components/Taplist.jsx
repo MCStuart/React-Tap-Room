@@ -4,16 +4,7 @@ import PropTypes from 'prop-types';
 function Taplist(props) {
   return (
     <div className='individual-tap'>
-      <style jsx global>{`
-        .tap-display {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          grid-template-rows: repeat(2, 1fr);
-          grid-gap: 1rem;
-        }
-      `}</style> 
-      <style jsx>{`
-        
+      <style jsx>{`  
         div.individual-tap {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           padding: 1rem;

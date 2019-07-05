@@ -63,7 +63,15 @@ var WalkIn = [
 export default function TapList() {
   return ( 
     <div>
-      <style jsx global>{`
+      <style jsx>{`
+        .tap-display {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-gap: 1rem;
+        }
+      `}</style> 
+      <style jsx>{`
         // CSS Goes Here
       `}</style> 
       <div className='tap-display'>

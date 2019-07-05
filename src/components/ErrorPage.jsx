@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 function Page404(props) {
   return (
     <div>
-      <h1>The page, {props.location.pathname} does not exist</h1>
-      <h3>Please <Link to='/'>click here</Link> to return to the main page</h3>
+      <h2>The page, {props.location.pathname} does not exist</h2>
+      <h4>Please <Link to='/'>click here</Link> to return to the main page</h4>
     </div>
   );
 }
