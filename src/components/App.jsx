@@ -8,7 +8,7 @@ import NewBeerKegForm from './NewBeerKeg';
 // import { BeerDetail } from './BeerDetail';
 
 
-function App(){
+export default function App() {
   return (
     <div>
       <style jsx global>{`
@@ -30,5 +30,3 @@ function App(){
     </div>
   );
 }
-
-export default App;

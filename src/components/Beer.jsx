@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Counter from './Counter';
 
 function Beer(props) {
   return (
-    <div className='individual-tap'>
-      <style jsx>{`  
+    <div>
+      <div className='individual-tap'>
+        <style jsx>{`  
         div.individual-tap {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           padding: 1rem;
@@ -45,23 +45,27 @@ function Beer(props) {
         }
 
       `}</style>
-      <h2>{props.brand}</h2>
-      <h2>{props.name}</h2>
-      <div className='beer-deets'>
-        <h2>{props.ABV}</h2>
-        <h2>{props.price}</h2>
+
+        <h2>{props.brand}</h2>
+        <h2>{props.name}</h2>
+        <div className='beer-deets'>
+          <h2>{props.ABV}</h2>
+          <h2>{props.price}</h2>
+        </div>
+        <h3>Pints Left: {props.pintsLeft}</h3>
+        <button i={props.key} onClick={props.sellPint}>Sell Me!</button>
       </div>
-      <Counter pintsLeft={props.pintsLeft} />
     </div>
   );
 }
 
 Beer.propTypes = {
-  name: PropTypes.string.isRequired,
-  brand: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  brand: PropTypes.string,
   price: PropTypes.string,
-  ABV: PropTypes.string.isRequired,
-  pintsLeft: PropTypes.number.isRequired
+  ABV: PropTypes.string,
+  pintsLeft: PropTypes.number
+  
 };
 
 export default Beer;
