@@ -1,6 +1,6 @@
 import React from 'react';
 import Beer from './Beer';
-import { WalkIn } from '../Models/WalkIn';
+// import { WalkIn } from '../Models/WalkIn';
 
 export default function Taplist(props) {
 
@@ -8,7 +8,7 @@ export default function Taplist(props) {
     <div>
       <h1>Now on Tap:</h1>
       <hr />
-      {WalkIn.map((beer, index) =>
+      {props.WalkIn.map((beer, index) =>
         <Beer name={beer.name}
           brand={beer.brand}
           price={beer.price}

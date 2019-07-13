@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import Page404 from './ErrorPage';
 import Admin from './Admin';
 import NewBeerKeg from './NewBeerKeg';
-// import { WalkIn } from '../Models/WalkIn';
+import { WalkIn } from '../Models/WalkIn';
 // import { BeerDetail } from './BeerDetail';
 
 
@@ -13,18 +13,20 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      WalkIn: []
+      WalkIn: WalkIn
     };
     this.handleAddingNewKegToTaplist = this.handleAddingNewKegToTaplist.bind(this);
   }
 
   handleAddingNewKegToTaplist(newKeg) {
-    // eslint-disable-next-line no-console
     var newTaplist = this.state.WalkIn.slice();
     newTaplist.push(newKeg);
     this.setState({
       WalkIn: newTaplist
     });
+    // eslint-disable-next-line no-console
+    console.log(newTaplist);
+    
   }
 
 
@@ -49,7 +51,7 @@ export default class App extends React.Component {
       `}</style>
         <Navbar />
         <Switch>
-          <Route exact path='/' component={Taplist} />
+          <Route exact path='/' render={() => <Taplist WalkIn={this.state.WalkIn} />} />
           <Route exact path='/admin' component={Admin} />
           <Route exact path='/add' render={() => <NewBeerKeg OnNewBeerKeg={this.handleAddingNewKegToTaplist} />} />
           <Route component={Page404} />
