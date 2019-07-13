@@ -68,7 +68,6 @@ function Navbar() {
           </div>
           <div className='links'>
             <Link to='/'><a className='navbar-text'>Taplist Home</a></Link>
-            <Link to='/beer'><a className='navbar-text'>All Beers</a></Link>
             <Link to='/admin'><a className='navbar-text'>Admin</a></Link>
           </div>
         </div>
