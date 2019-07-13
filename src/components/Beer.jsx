@@ -53,7 +53,7 @@ function Beer(props) {
           <h2>{props.price}</h2>
         </div>
         <h3>Pints Left: {props.pintsLeft}</h3>
-        <button i={props.key} onClick={props.sellPint}>Sell Me!</button>
+        <button>Sell Me!</button>
       </div>
     </div>
   );
@@ -65,7 +65,7 @@ Beer.propTypes = {
   price: PropTypes.string,
   ABV: PropTypes.string,
   pintsLeft: PropTypes.number
-  
+
 };
 
 export default Beer;
