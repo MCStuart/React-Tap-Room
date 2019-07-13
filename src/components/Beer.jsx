@@ -1,5 +1,6 @@
 import React from 'react';
 import Taplist from './Taplist';
+import Counter from './Counter';
 
 var WalkIn = [
   {
