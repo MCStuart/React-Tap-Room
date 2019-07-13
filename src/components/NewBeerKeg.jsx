@@ -1,7 +1,9 @@
+/* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
-export default function NewBeerKegForm(props) {
+export default function NewBeerKeg(props) {
   let _name = null;
   let _brewery = null;
   let _price = null;
@@ -15,7 +17,7 @@ export default function NewBeerKegForm(props) {
     console.log(_price.value);
     console.log(_ABV.value);
     
-    props.OnNewBeerKegSubmit({ name: _name.value, brewery: _brewery.value, price: _price.value, ABV: _ABV.value });
+    props.OnNewBeerKeg({ name: _name.value, brewery: _brewery.value, price: _price.value, ABV: _ABV.value, id: v4() });
     _name.value = '';
     _brewery.value = '';
     _price.value = '';
@@ -39,7 +41,7 @@ export default function NewBeerKegForm(props) {
   );
 }
 
-NewBeerKegForm.propTypes = {
+NewBeerKeg.propTypes = {
   onNewKeg: PropTypes.func,
-  OnNewBeerKegSubmit: PropTypes.func
+  OnNewBeerKeg: PropTypes.func
 };

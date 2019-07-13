@@ -4,8 +4,8 @@ import Taplist from './Taplist';
 import Navbar from './Navbar';
 import Page404 from './ErrorPage';
 import Admin from './Admin';
-import NewBeerKegForm from './NewBeerKeg';
-import { WalkIn } from '../Models/WalkIn';
+import NewBeerKeg from './NewBeerKeg';
+// import { WalkIn } from '../Models/WalkIn';
 // import { BeerDetail } from './BeerDetail';
 
 
@@ -18,15 +18,15 @@ export default class App extends React.Component {
     this.handleAddingNewKegToTaplist = this.handleAddingNewKegToTaplist.bind(this);
   }
 
-  handleAddingNewKegToTaplist(newKeg){
-    console.log("handleAddingNewKegToTaplist Fired");
-    console.log(newKeg);
-    
-    
+  handleAddingNewKegToTaplist(newKeg) {
+    // eslint-disable-next-line no-console
     var newTaplist = this.state.WalkIn.slice();
     newTaplist.push(newKeg);
-    this.setState({WalkIn: newTaplist});
+    this.setState({
+      WalkIn: newTaplist
+    });
   }
+
 
   // handleSellPint(i) {
   //   const selectedBeer = this.state.beers.slice(i, i + 1);
@@ -51,7 +51,7 @@ export default class App extends React.Component {
         <Switch>
           <Route exact path='/' component={Taplist} />
           <Route exact path='/admin' component={Admin} />
-          <Route exact path='/add' render={() => <NewBeerKegForm OnNewBeerKegSubmit={this.handleAddingNewKegToTaplist} />} />
+          <Route exact path='/add' render={() => <NewBeerKeg OnNewBeerKeg={this.handleAddingNewKegToTaplist} />} />
           <Route component={Page404} />
         </Switch>
       </div>

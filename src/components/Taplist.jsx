@@ -2,7 +2,7 @@ import React from 'react';
 import Beer from './Beer';
 import { WalkIn } from '../Models/WalkIn';
 
-export default function Tapist() {
+export default function Taplist(props) {
 
   return (
     <div>
@@ -13,9 +13,10 @@ export default function Tapist() {
           brand={beer.brand}
           price={beer.price}
           ABV={beer.ABV}
-          key={index}
+          key={beer.id}
           pintsLeft={beer.pintsLeft}
           sellPint={() => this.handleSellPint({ index })}
+
         />
       )}
     </div>

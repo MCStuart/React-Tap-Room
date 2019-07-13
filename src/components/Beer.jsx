@@ -65,7 +65,6 @@ Beer.propTypes = {
   price: PropTypes.string,
   ABV: PropTypes.string,
   pintsLeft: PropTypes.number
-
 };
 
 export default Beer;
