@@ -11,8 +11,10 @@ export default function Admin() {
       }
       `}</style>
       <h2>Choose a selection to modify</h2>
-      <Link to='/add'>Add Beer</Link>
+      <Link to='/add' >Add Beer</Link>
+      <br/>
       <Link to='/edit'>Edit Beer</Link>
+      <br/>
       <Link to='/'>Home</Link>
     </div>
   );
