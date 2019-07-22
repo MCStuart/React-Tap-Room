@@ -20,6 +20,7 @@ There are currently no known bugs. The lack of interactivity or responsive eleme
 
 ![alt text](https://github.com/MCStuart/React-Tap-Room/blob/master/React%20Tap%20Room%20Component%20Tree.png "Component Tree")
 
+
 ## Specs
 
 |     Behavior    |  Input | Output
